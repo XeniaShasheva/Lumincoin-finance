@@ -1,0 +1,99 @@
+<!--<div class="layout d-flex">-->
+
+    <!--    <div class="sidebar d-flex flex-column flex-shrink-0  p-3 bg-light" style="width: 280px;">-->
+    <!--        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none m-3">-->
+    <!--            <img src="/images/logo.png" alt="">-->
+    <!--        </a>-->
+    <!--        <hr>-->
+    <!--        <ul class="nav nav-pills flex-column mb-auto">-->
+    <!--            <li class="nav-item">-->
+    <!--                <a href="#" class="nav-link link-dark" aria-current="page">-->
+    <!--                    <img src="/images/home2.png" alt="main">-->
+    <!--                    Главная-->
+    <!--                </a>-->
+    <!--            </li>-->
+    <!--            <li>-->
+    <!--                <a href="#/all" class="nav-link link-dark">-->
+    <!--                    <img src="/images/cash.png" alt="cash">-->
+    <!--                    Доходы & Расходы-->
+    <!--                </a>-->
+    <!--            </li>-->
+    <!--            <li class="mb-1">-->
+    <!--                <button class="btn btn-toggle d-inline-flex align-items-baseline rounded border-0 collapsed"-->
+    <!--                        data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="true">-->
+    <!--                    Категории <img src="/images/arrow.png" alt="arrow">-->
+    <!--                </button>-->
+    <!--                <div class="collapse show " id="dashboard-collapse">-->
+    <!--                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">-->
+    <!--                        <li><a href="#/income" class="link-dark d-inline-flex text-decoration-none rounded">Доходы</a></li>-->
+    <!--                        <li><a href="#/expenses" class="link-dark d-inline-flex text-decoration-none rounded">Расходы</a></li>-->
+    <!--                    </ul>-->
+    <!--                </div>-->
+    <!--            </li>-->
+    <!--        </ul>-->
+
+    <!--        <div class="dropdown">-->
+    <!--            <div class="cash ms-3 fw-bold">-->
+    <!--                Баланс: <span class="text-primary fw-bold" id="balance"></span>-->
+    <!--            </div>-->
+    <!--            <hr>-->
+    <!--            <a href="#" class="d-flex align-items-center link-dark text-decoration-none mb-5 mt-5 ms-2"-->
+    <!--               data-bs-toggle="dropdown" aria-expanded="false">-->
+    <!--                <img src="/images/personIcon.png" alt="" width="32" height="32" class="rounded-circle me-2">-->
+    <!--                <strong>NameLastName</strong>-->
+    <!--            </a>-->
+    <!--            <ul class="dropdown-menu text-small shadow" style="">-->
+    <!--                <li><a class="dropdown-item" href="#">Sign out</a></li>-->
+    <!--            </ul>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <div class="main" id="main">
+        <div class="name">Доходы и расходы</div>
+        <div class="buttons">
+            <button type="button" class="btn btn-success" id="createIncome">Создать доход</button>
+            <button type="button" class="btn btn-danger" id="createExpense">Создать расход</button>
+        </div>
+        <div class="information">
+            <div class="information-buttons">
+                <button type="button" class="btn btn-light btn-information" id="today">Сегодня</button>
+                <button type="button" class="btn btn-light btn-information" id="week">Неделя</button>
+                <button type="button" class="btn btn-light btn-information" id="month">Месяц</button>
+                <button type="button" class="btn btn-light btn-information" id="year">Год</button>
+                <button type="button" class="btn btn-light btn-information" id="all">Все</button>
+                <button type="button" class="btn btn-light btn-information" id="interval">Интервал</button>
+                <span>c</span>
+                <input id="dateFrom" type="text" class="btn btn-date" name="userDate"  min="1800-01-01" max="3000-12-31" placeholder="Дата" onfocus="(this.type='date')" onblur="(this.type='text')">
+                <span>по</span>
+                <input id="dateTo" type="text" class="btn btn-date" name="userDate"  min="1800-01-01" max="3000-12-31" placeholder="Дата" onfocus="(this.type='date')" onblur="(this.type='text')">
+            </div>
+        </div>
+        <table class="table text-center" id="table">
+            <thead>
+            <tr class="d-flex border-top">
+                <th style="width:13%" class="px-0 py-3 text-center border-0">№ операции</th>
+                <th style="width:13%" class="px-0 py-3 text-center border-0">Тип</th>
+                <th style="width:13%" class="px-0 py-3 text-center border-0">Категория</th>
+                <th style="width:13%" class="px-0 py-3 text-center border-0">Сумма</th>
+                <th style="width:13%" class="px-0 py-3 text-center border-0">Дата</th>
+                <th style="width:30%" class="ps-5 py-3 text-start border-0">Комментарий</th>
+                <th style="width:5%" class="ps-5 py-3 text-start border-0"></th>
+            </tr>
+            </thead>
+            <tbody class="tbody" id="tbody">
+
+            </tbody>
+        </table>
+
+
+    </div>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <div class="popup-main">
+                <div class="popup-text">Вы действительно хотите удалить операцию?</div>
+            </div>
+            <button type="button" class="btn  btn-success" id="yes">Да, удалить</button>
+            <button type="button" class="btn btn-danger" id="no">Не удалять</button>
+        </div>
+    </div>
+<!--</div>-->
