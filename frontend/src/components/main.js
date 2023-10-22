@@ -109,7 +109,7 @@ export class Main{
             that.init(that.interval);
 
         }
-        document.getElementById('all').onclick = function () {
+        document.getElementById('allAll').onclick = function () {
             that.interval = '1999-01-01&dateTo=2300-09-13';
             that.init(that.interval);
 

@@ -31,7 +31,7 @@ export class Income {
     }
 
     incomeProcess() {
-        const mainOptionElement = document.getElementById('main');
+        const mainOptionElement = document.getElementById('mainIncome');
         if(this.income && this.income.length > 0) {
             this.income.forEach(item => {
                 const that = this;

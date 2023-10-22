@@ -121,7 +121,7 @@ export class New {
                 type: type,
                 amount: this.input[2].value,
                 date: this.input[3].value,
-                comment: this.input[4].value ===true?this.input[4].value:' ',
+                comment: this.input[4].value,
                 category_id:  Number(id)
             })
 

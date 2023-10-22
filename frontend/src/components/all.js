@@ -4,12 +4,10 @@ import config from "../../config/config.js";
 
 export class All {
     static interval = null;
-    static  idDelite = null;
-
     constructor() {
         let button = document.querySelectorAll('.btn-information')
-        button.forEach((itm)=>{
-            itm.addEventListener('click', function(){
+        button.forEach((item)=>{
+            item.addEventListener('click', function(){
                 button.forEach((btn)=>{
                     btn.style.backgroundColor='transparent'
                     btn.style.color='#6c757d'
@@ -208,7 +206,7 @@ export class All {
             that.init(that.interval);
         }
 
-        document.getElementById('all').onclick = function () {
+        document.getElementById('allAll').onclick = function () {
             that.interval = '1999-01-01&dateTo=2300-09-13'
             that.init(that.interval);
         }
@@ -230,7 +228,7 @@ export class All {
         for(let i=0;i<deleteElms.length;i++) {
             deleteElms[i].addEventListener('click', function (e) {
                 if (e) {
-                    that.deleteActions();
+                    that.deleteActions(this);
                 }
 
             })
@@ -238,6 +236,7 @@ export class All {
     }
 
     deleteActions(item) {
+        const that = this;
         let popup = document.getElementById('popup');
         popup.style.display = 'block';
         this.yesElement = document.getElementById('yes');
@@ -251,7 +250,7 @@ export class All {
                         throw new Error(result.message);
                     }
                     popup.style.display = 'none';
-                    location.href = '#/all'
+                    that.init(that.interval);
 
 
                 }
